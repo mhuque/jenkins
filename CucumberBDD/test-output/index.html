@@ -148,7 +148,7 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Automation Test Suite&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;ups.nj.listener.TestListener&quot;/&gt;
+    &lt;listener class-name=&quot;ups.nj.listener.Reporting&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Zoopla Login test&quot;&gt;
     &lt;classes&gt;
@@ -204,12 +204,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'ups.nj.myrunner.LoginRunner')
-data.setCell(0, 3, 8913);
+data.setCell(0, 3, 10341);
 window.suiteTableData['Automation_Test_Suite']= { tableData: data, tableDiv: 'times-div-Automation_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Automation_Test_Suite">
               </div> <!-- times-div-Automation_Test_Suite -->
             </div> <!-- times-div -->
@@ -242,11 +242,11 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">feature(User able to login with valid username & password)</span>
-                <span class="method-start">296 ms</span>
+                <span class="method-start">298 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">9213 ms</span>
+                <span class="method-start">10659 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

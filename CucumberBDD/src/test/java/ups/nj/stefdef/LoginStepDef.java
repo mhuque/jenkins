@@ -6,8 +6,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import Utilities.CommonUtility;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.*;
 import ups.nj.supperpage.CucumberBaseClass;
 import zoopla.pagefactory.elements.ZooplaLoginPage;
