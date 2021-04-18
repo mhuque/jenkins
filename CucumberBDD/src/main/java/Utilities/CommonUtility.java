@@ -4,6 +4,8 @@ package Utilities;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -39,8 +41,12 @@ public class CommonUtility extends CucumberBaseClass {
 	}
 	
 	public static void takeScreenShot() throws IOException {
+		
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+		String time = timeStamp + ".png";
+		
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File targetFile = new File(System.getProperty("user.dir") + "//screenshot/screenshot.png");
+		File targetFile = new File(System.getProperty("user.dir") + "//screenshot/screenshot-" + time);
 		targetFile.getParentFile().mkdir();
 		srcFile.createNewFile();
 		Files.copy(srcFile, targetFile);

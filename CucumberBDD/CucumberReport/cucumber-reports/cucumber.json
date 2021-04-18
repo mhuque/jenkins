@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 2473034829,
+              "duration": 1527867600,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 253422359,
+              "duration": 630554100,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 119999186,
+              "duration": 85033500,
               "status": "passed"
             },
             "line": 8,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 1975019450,
+              "duration": 4144333600,
               "status": "passed"
             },
             "line": 9,
@@ -64,7 +64,7 @@
           },
           {
             "result": {
-              "duration": 2539650332,
+              "duration": 3506715300,
               "status": "passed"
             },
             "line": 10,
@@ -76,7 +76,7 @@
           },
           {
             "result": {
-              "duration": 394727916,
+              "duration": 395637500,
               "status": "passed"
             },
             "line": 11,
@@ -98,7 +98,7 @@
           },
           {
             "result": {
-              "duration": 23525768,
+              "duration": 25962600,
               "status": "passed"
             },
             "line": 12,
@@ -110,7 +110,7 @@
           },
           {
             "result": {
-              "duration": 2540736424,
+              "duration": 2343102000,
               "status": "passed"
             },
             "line": 13,
@@ -124,7 +124,7 @@
       }
     ],
     "name": "User able to login with valid username \u0026 password",
-    "description": "\nDescription: \"User login zoopla website \u0026 search the property \u0026\"\n      \"select  the  property as well as verify the property price.\"",
+    "description": "\r\nDescription: \"User login zoopla website \u0026 search the property \u0026\"\r\n      \"select  the  property as well as verify the property price.\"",
     "id": "user-able-to-login-with-valid-username-\u0026-password",
     "keyword": "Feature",
     "uri": "loginFunction.feature",

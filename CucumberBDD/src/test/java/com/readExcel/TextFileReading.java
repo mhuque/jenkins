@@ -28,13 +28,13 @@ public class TextFileReading {
 		prop.load(configPropfile);
 		// Loading Config.properties file is done
 		String br = prop.getProperty("browser");
-		if (br.equals("firefox")) {
+		if (br.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", prop.getProperty("firefoxpath"));
 			driver = new FirefoxDriver();
 			
-		} else if (br.equals("chrome")) {
+		} else if (br.equalsIgnoreCase("chrome")) {
 			//System.setProperty("webdriver.chrome.driver", prop.getProperty("chromepath"));
-			System.setProperty("webdriver.chrome.driver", "chrome");
+			System.setProperty("webdriver.chrome.driver", prop.getProperty("chromepath"));
 			driver = new ChromeDriver();
 			
 		} else if (br.equals("ie")) {
@@ -50,12 +50,12 @@ public class TextFileReading {
 	}
 
 	@Test
-	public static void main() throws Throwable{
+	public static void main() throws Throwable {
 		TextFileReading.initialization();
 		driver.findElement(By.xpath("(//*[text()='Accept all cookies'])[2]")).click();
-		driver.findElement(By.xpath("(//*[text()='Sign in'])[1]")).click();
-		driver.findElement(By.cssSelector("#signin_email")).sendKeys(prop.getProperty("userName"));
-		driver.findElement(By.cssSelector("#signin_password")).sendKeys(prop.getProperty("password"));
-		driver.findElement(By.id("signin_submit")).click();
+		driver.findElement(By.xpath("(//*[text()='Sign in'])[2]")).click();
+		driver.findElement(By.xpath("//*[@type='email']")).sendKeys(prop.getProperty("userName"));
+		driver.findElement(By.xpath("//*[@type='password']")).sendKeys(prop.getProperty("password"));
+		driver.findElement(By.xpath("//*[@type='password']")).submit();
 	}
 }
