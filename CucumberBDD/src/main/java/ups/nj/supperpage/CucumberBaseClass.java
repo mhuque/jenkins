@@ -34,7 +34,7 @@ public class CucumberBaseClass {
 	}  
 	public void setUP() {
 		logger.info("******** > Test excuted with chrome browser  < ***********");
-		System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
