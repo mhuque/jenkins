@@ -17,10 +17,10 @@ public class CrossBrowserTesting extends CucumberBaseClass {
 	@Parameters("browser")
 	public void setUp(String browser) throws Exception {
 		if (browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "/Applications/geckodriver");
+			System.setProperty("webdriver.gecko.driver", "./Driver/geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else if (browser.equalsIgnoreCase("safari")) {
 			driver = new SafariDriver();

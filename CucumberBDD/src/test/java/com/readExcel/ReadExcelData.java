@@ -17,7 +17,7 @@ import ups.nj.supperpage.CucumberBaseClass;
 
 
 public class ReadExcelData extends CucumberBaseClass{
-		public String path = "/Users/mohammedalam/git/repository3/CucumberBDD/TestData/testData.xlsx";
+		public String path = "./TestData/testData.xlsx";
         
 		// This is a arraylist return method 
 	    public ArrayList<String> readExcel(int colno) throws IOException	{	

@@ -19,7 +19,7 @@ public class TestNGDataProvider {
 	}	
 	@Test(dataProvider = "Authentication")
 	public void testWebSite(String userName, String pwd) {
-		System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
