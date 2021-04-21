@@ -28,9 +28,9 @@
 						</goals>
 						<configuration>
 							<projectName>cucumber-jvm-example</projectName>
-							<outputDirectory>CucumberReport/goutham-cucumber-reports</outputDirectory>
-							<cucumberOutput>CucumberReport/cucumber-reports</cucumberOutput>
-					</configuration>
+							<outputDirectory>${project.build.directory}/goutham-cucumber-reports</outputDirectory>
+							<cucumberOutput>${project.build.directory}/cucumber-reports</cucumberOutput>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>

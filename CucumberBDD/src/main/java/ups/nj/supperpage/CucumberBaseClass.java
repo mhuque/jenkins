@@ -9,19 +9,16 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
-
 public class CucumberBaseClass {
 	
 	public static Logger logger;
-	
 	public static Properties prop;
 	public static WebDriver driver;
-	
 	
 	public CucumberBaseClass() {
 		logger = Logger.getLogger("Zoopla Automation"); // Added logger
 		PropertyConfigurator.configure("log4j.properties");// Added logger
+		
 		try {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream("./src/main/java/ups/config/config.properties");
@@ -33,7 +30,7 @@ public class CucumberBaseClass {
 		}
 	}  
 	public void setUP() {
-		logger.info("******** > Test excuted with chrome browser  < ***********");
+		logger.info("********** > Test excuted with chrome browser  < ***********");
 		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();

@@ -42,15 +42,29 @@ public class CommonUtility extends CucumberBaseClass {
 	
 	public static void takeScreenShot() throws IOException {
 		
-		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-		String time = timeStamp + ".png";
-		
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File targetFile = new File(System.getProperty("user.dir") + "//screenshot/screenshot-" + time);
+		File targetFile = new File(System.getProperty("user.dir") + "//screenshot/screenshot.png");
 		targetFile.getParentFile().mkdir();
 		srcFile.createNewFile();
 		Files.copy(srcFile, targetFile);
 		
+		
+		
+//		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+//		String time = timeStamp + ".png";
+//		
+//		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//		File targetFile = new File(System.getProperty("user.dir") + "//screenshot/screenshot-" + time);
+//		targetFile.getParentFile().mkdir();
+//		srcFile.createNewFile();
+//		Files.copy(srcFile, targetFile);
+		
 	}
+	
+public void getHighLighter(WebDriver driver, WebElement element) {
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver; 
+		js.executeScript("arguments[0].setAttribute('style','background: yellow; border: 4px solid red;');", element);		
+	}	
 
 }

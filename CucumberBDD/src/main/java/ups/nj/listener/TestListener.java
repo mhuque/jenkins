@@ -9,7 +9,6 @@ import Utilities.CommonUtility;
 
 public class TestListener implements ITestListener {
 
-	
 	@Override
 	public void onTestStart(ITestResult result) {
 		System.out.println("I  am in onStart method  :"+ result.getName());	
@@ -31,17 +30,9 @@ public class TestListener implements ITestListener {
 		}
 	}
 
-	@Override
-	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
-		
-	}
+
+
 
 	@Override
 	public void onStart(ITestContext context) {
@@ -54,5 +45,19 @@ public class TestListener implements ITestListener {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
 
 }

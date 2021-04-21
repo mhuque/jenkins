@@ -11,7 +11,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 @CucumberOptions(  
 	
-		plugin= {"pretty","json:CucumberReport/cucumber-reports/cucumber.json"},
+		//plugin= {"pretty","json:CucumberReport/cucumber-reports/cucumber.json"},
+		plugin= {"pretty","json:target/cucumber-reports/cucumber.json"},
 		features = "CucumberBDD/",
 		glue = {"ups.nj.stefdef","ups.nj.hooks"},
 		tags = "@sanity",

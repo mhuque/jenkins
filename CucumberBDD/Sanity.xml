@@ -3,7 +3,7 @@
 <suite name="Automation Test Suite">
 	<listeners>
 		<listener class-name="ups.nj.listener.Reporting"/>
-<!-- 		<listener class-name="ups.nj.listener.TestListener"/> -->
+ 		<listener class-name="ups.nj.listener.TestListener"/> 
 	</listeners>  
 	<test name="Zoopla Login test">
 		<classes>

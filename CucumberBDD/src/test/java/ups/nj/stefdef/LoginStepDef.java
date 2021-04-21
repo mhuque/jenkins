@@ -34,14 +34,16 @@ public class LoginStepDef extends CucumberBaseClass {
 		logger.info("******** > User able to click on the login button < ***********");
 		CommonUtility.getExplicitWait(pf.getClickingSigninBTN(), driver, 300);
 		pf.getClickingSigninBTN().click();
+		
 	}
 
 	// this on first run
 	@When("^User enter the userName \"([^\"]*)\" and password \"([^\"]*)\"$")
-	public void user_enter_the_userName_and_password(String userName, String pwd) {
+	public void user_enter_the_userName_and_password(String userName, String pwd) throws Exception {
 		logger.info("******** > User enter the userName & Peassword < ***********");
 		pf.getsendUserName().sendKeys(userName);
 		pf.getPwd().sendKeys(pwd);
+		
 
 	}
 
@@ -62,6 +64,7 @@ public class LoginStepDef extends CucumberBaseClass {
 		Thread.sleep(2000);
 		logger.info("******** > User able to take screen shot for verfy the homepage < ***********");
 		CommonUtility.takeScreenShot();
+		
 
 	}
 
@@ -101,6 +104,7 @@ public class LoginStepDef extends CucumberBaseClass {
 		logger.info("******** > Verify the price of the property < ***********");
 		String price = pf.getVerifyThePrice().getText();
 		System.out.println("My Property price : " + price);
+		
 
 	}
 
